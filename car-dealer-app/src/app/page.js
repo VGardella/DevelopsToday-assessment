@@ -27,8 +27,8 @@ export default async function Home() {
         <div class="h-72 bg-white shadow-2xl rounded-b-xl p-10">
           <Suspense fallback={<LoadingMessage />}>
             <p class="text-center font-semibold">
-              Need more information about any of our models? <br />
-              Choose from the menus bellow!
+              Need more information about any of our car models? <br />
+              Choose a brand and a year from the lists bellow!
             </p>
             <Form carList={carList} yearList={yearList} />
           </Suspense>
