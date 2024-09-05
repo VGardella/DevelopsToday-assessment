@@ -1,24 +1,6 @@
 import { Suspense } from "react";
 import LoadingMessage from "@/app/components/loading";
 
-function NoResults({ makeId, year }) {
-  return (
-    <div class="w-full max-w-3xl mx-auto my-auto text-center flex flex-col gap-3">
-      <h2 class=" text-3xl">
-        Sorry! We could&apos;t find information about this model
-        <br />
-        (Car ID: {makeId}, year: {year})
-      </h2>
-      <a
-        href="/"
-        class="h-10 w-56 bg-pink-700 hover:bg-pink-800 self-center rounded-lg cursor-pointer text-white flex items-center justify-center"
-      >
-        Go to Home Page! &rsaquo;
-      </a>
-    </div>
-  );
-}
-
 export default async function Result({ params }) {
   const { makeId, year } = params;
   let carData;
@@ -34,9 +16,21 @@ export default async function Result({ params }) {
   return (
     <div class="h-full w-full max-w-4xl mx-auto flex flex-col justify-center items-center">
       {carData.Results.length === 0 ? (
-        <NoResults makeId={makeId} year={year} />
+        <div class="w-full h-56 max-w-3xl mx-auto my-72 text-center flex flex-col justify-between p-10 gap-3 bg-white rounded-xl shadow-2xl">
+          <h2 class=" text-3xl">
+            Sorry! We could&apos;t find information about this model
+            <br />
+            (Car ID: {makeId}, year: {year})
+          </h2>
+          <a
+            href="/"
+            class="h-10 w-56 bg-pink-700 hover:bg-pink-800 self-center rounded-lg cursor-pointer text-white flex items-center justify-center"
+          >
+            Go to Home Page! &rsaquo;
+          </a>
+        </div>
       ) : (
-        <div class="w-full my-40">
+        <div class="w-full my-32">
           <div class="py-10 text-center bg-pink-700 rounded-t-xl leading-10 text-white font-sans text-3xl font-semibold">
             <h1>{`Name: ${carData.Results[0]["Make_Name"]} | ID: ${carData.Results[0]["Make_ID"]} | Year: ${year}`}</h1>
           </div>
