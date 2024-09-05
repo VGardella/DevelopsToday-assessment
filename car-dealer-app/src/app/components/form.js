@@ -20,7 +20,6 @@ export default function Form({ carList, yearList }) {
     <form class="flex flex-col h-40 justify-between" onSubmit={handleSubmit}>
       <div class="grid grid-cols-2 py-5 gap-10">
         <div class="flex flex-col">
-          <label htmlFor="car">Car model:</label>
           <Dropdown
             values={modelList}
             dropName="car"
@@ -29,7 +28,6 @@ export default function Form({ carList, yearList }) {
           />
         </div>
         <div class="flex flex-col">
-          <label htmlFor="year">Year:</label>
           <Dropdown
             values={yearList}
             dropName="year"
