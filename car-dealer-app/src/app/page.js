@@ -19,8 +19,8 @@ export default async function Home() {
   for (let year = startYear; year <= currentYear; year++) yearList.push(year);
 
   return (
-    <main class="h-full w-full max-w-3xl mx-auto flex flex-col justify-center items-center">
-      <div class="w-full">
+    <main class="h-screen w-full max-w-3xl mx-auto flex flex-col justify-center items-center">
+      <div class="w-full my-auto">
         <div class="py-10 text-center bg-pink-700 rounded-t-xl leading-10 text-white font-sans text-3xl font-semibold">
           <h1>Welcome to Dev&apos;s car dealership!</h1>
         </div>

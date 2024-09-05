@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-screen md:h-auto lg:h-screen max-w-screen-lg mx-auto bg-gray-200`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased w-full h-full md:h-auto lg:h-full max-w-screen-lg mx-auto bg-gray-200 overflow-y-scroll`}
       >
         {children}
       </body>
