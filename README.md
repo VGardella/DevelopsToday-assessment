@@ -26,8 +26,23 @@ The application will be available at http://localhost:3000.
 
 ## Usage
 
-This application is very easy to use: on the Home Page, there are two dropdown menus, one with a list of car brands and the other with a list of years spaning from 2015 to the present. Once you choose a value for each, click the 'Next' button and you will be redirected to the result page. There, you will see a table with a list of car models from that brand released in the selected year and their corresponding identification number.
+This application is very easy to use: 
 
+On the Home Page, there are two dropdown menus, one with a list of car brands and the other with a list of years spaning from 2015 to the present.
+
+![](car-dealer-app\src\app\assets\homepage.png)
+
+Choose a value for each one and click the 'Next' button, and you will be redirected to the result page. 
+
+![](car-dealer-app\src\app\assets\select-dropdown.png)
+
+There, you will see a table with a list of car models from that brand released in the selected year and their corresponding identification number.
+
+![](car-dealer-app\src\app\assets\resultpage.png)
+
+If there isn't information about that particular brand and year an error message wil be shown.
+
+![](car-dealer-app\src\app\assets\errorscreen.png)
 
 ## Features
 
