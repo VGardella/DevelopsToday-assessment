@@ -17,9 +17,9 @@ export default function Form({ carList, yearList }) {
   const modelList = carList.map((item) => item.MakeName).sort();
 
   return (
-    <form className="dropdown-form" onSubmit={handleSubmit}>
-      <div className="selectors">
-        <div className="dropdown-container">
+    <form class="flex flex-col h-40 justify-between" onSubmit={handleSubmit}>
+      <div class="grid grid-cols-2 py-5 gap-10">
+        <div class="flex flex-col">
           <label htmlFor="car">Car model:</label>
           <Dropdown
             values={modelList}
@@ -28,7 +28,7 @@ export default function Form({ carList, yearList }) {
             onChange={(e) => setSelectedModel(e.target.value)}
           />
         </div>
-        <div className="dropdown-container">
+        <div class="flex flex-col">
           <label htmlFor="year">Year:</label>
           <Dropdown
             values={yearList}
@@ -38,7 +38,11 @@ export default function Form({ carList, yearList }) {
           />
         </div>
       </div>
-      <button type="submit" disabled={!selectedYear || !selectedModel}>
+      <button
+        class="h-10 w-20 bg-pink-700 hover:bg-pink-800 self-center rounded-lg cursor-pointer text-white"
+        type="submit"
+        disabled={!selectedYear || !selectedModel}
+      >
         Next
       </button>
     </form>
