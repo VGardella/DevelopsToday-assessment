@@ -3,10 +3,11 @@ import LoadingMessage from "@/app/components/loading";
 
 function NoResults({ makeId, year }) {
   return (
-    <div className="message">
-      <h2>
-        Sorry! We could&apos;t find information about this model (Car ID:{" "}
-        {makeId}, year: {year})
+    <div class="w-full max-w-3xl mx-auto my-auto text-center flex flex-col gap-3 ">
+      <h2 class=" text-3xl">
+        Sorry! We could&apos;t find information about this model
+        <br />
+        (Car ID: {makeId}, year: {year})
       </h2>
     </div>
   );
@@ -25,13 +26,13 @@ export default async function Result({ params }) {
   const headers = ["Model ID", "Model Name"];
 
   return (
-    <div className="results">
+    <div class="flex h-full">
       {carData.Results.length === 0 ? (
         <NoResults makeId={makeId} year={year} />
       ) : (
-        <div className="result-container">
+        <div class="">
           <h1>{`Name: ${carData.Results[0]["Make_Name"]} | ID: ${carData.Results[0]["Make_ID"]}`}</h1>
-          <table className="result-table">
+          <table class="">
             <thead>
               <tr>
                 {headers.map((item) => {
