@@ -9,6 +9,12 @@ function NoResults({ makeId, year }) {
         <br />
         (Car ID: {makeId}, year: {year})
       </h2>
+      <a
+        href="/"
+        class="h-10 w-56 bg-pink-700 hover:bg-pink-800 self-center rounded-lg cursor-pointer text-white flex items-center justify-center"
+      >
+        Go to Home Page! &rsaquo;
+      </a>
     </div>
   );
 }
@@ -49,6 +55,14 @@ export default async function Result({ params }) {
               ))}
             </tbody>
           </table>
+          <div class="">
+            <a
+              href="/"
+              class="h-10 w-56 bg-pink-700 hover:bg-pink-800 self-center rounded-lg cursor-pointer text-white flex items-center justify-center"
+            >
+              Go to Home Page! &rsaquo;
+            </a>
+          </div>
         </div>
       )}
     </div>
