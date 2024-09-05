@@ -20,7 +20,7 @@ export default function Form({ carList, yearList }) {
     <form className="dropdown-form" onSubmit={handleSubmit}>
       <div className="selectors">
         <div className="dropdown-container">
-          <label for="car">Car model:</label>
+          <label htmlFor="car">Car model:</label>
           <Dropdown
             values={modelList}
             dropName="car"
@@ -29,7 +29,7 @@ export default function Form({ carList, yearList }) {
           />
         </div>
         <div className="dropdown-container">
-          <label for="year">Year:</label>
+          <label htmlFor="year">Year:</label>
           <Dropdown
             values={yearList}
             dropName="year"
