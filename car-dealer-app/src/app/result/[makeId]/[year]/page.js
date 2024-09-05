@@ -18,7 +18,7 @@ export default async function Result({ params }) {
       {carData.Results.length === 0 ? (
         <div class="w-full h-56 max-w-3xl mx-auto my-72 text-center flex flex-col justify-between p-10 gap-3 bg-white rounded-xl shadow-2xl">
           <h2 class=" text-3xl">
-            Sorry! We could&apos;t find information about this model
+            Sorry! We could&apos;t find information about this brand
             <br />
             (Car ID: {makeId}, year: {year})
           </h2>
